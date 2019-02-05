@@ -8,7 +8,7 @@ import java.io.File
 
 internal class CatCommandTest {
     private val sep = File.separator
-    private val lineSep = System.getProperty("line.separator")
+    private val lineSep = "\r\n"
     private val env = Environment()
     private val testDirPrefix = ".${sep}src${sep}test${sep}resources$sep"
 
