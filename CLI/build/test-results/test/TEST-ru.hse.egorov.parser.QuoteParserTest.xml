@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.hse.egorov.parser.QuoteParserTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-02-05T19:57:20" hostname="vladimir" time="0.014">
+  <properties/>
+  <testcase name="testStrongQuotesInsideWeakQuotes()" classname="ru.hse.egorov.parser.QuoteParserTest" time="0.002"/>
+  <testcase name="testStrongQuotes()" classname="ru.hse.egorov.parser.QuoteParserTest" time="0.001"/>
+  <testcase name="testWeakQuotes()" classname="ru.hse.egorov.parser.QuoteParserTest" time="0.002"/>
+  <testcase name="testInvalidQuotes()" classname="ru.hse.egorov.parser.QuoteParserTest" time="0.003"/>
+  <testcase name="testWeakAndStrongQuotes()" classname="ru.hse.egorov.parser.QuoteParserTest" time="0.0"/>
+  <testcase name="testNoQuotes()" classname="ru.hse.egorov.parser.QuoteParserTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

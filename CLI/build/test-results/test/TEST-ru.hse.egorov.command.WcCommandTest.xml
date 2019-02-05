@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.hse.egorov.command.WcCommandTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-02-05T19:57:20" hostname="vladimir" time="0.013">
+  <properties/>
+  <testcase name="testTwoFiles()" classname="ru.hse.egorov.command.WcCommandTest" time="0.006"/>
+  <testcase name="testOneFile()" classname="ru.hse.egorov.command.WcCommandTest" time="0.001"/>
+  <testcase name="testNoSuchFile()" classname="ru.hse.egorov.command.WcCommandTest" time="0.001"/>
+  <testcase name="testPreviousResult()" classname="ru.hse.egorov.command.WcCommandTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

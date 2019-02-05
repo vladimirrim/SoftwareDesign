@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.hse.egorov.parser.CliParserTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-02-05T19:57:20" hostname="vladimir" time="0.007">
+  <properties/>
+  <testcase name="testThreeCommands()" classname="ru.hse.egorov.parser.CliParserTest" time="0.002"/>
+  <testcase name="testAssignmentCommand()" classname="ru.hse.egorov.parser.CliParserTest" time="0.001"/>
+  <testcase name="testOneCommand()" classname="ru.hse.egorov.parser.CliParserTest" time="0.001"/>
+  <testcase name="testWeakQuotingSubstitution()" classname="ru.hse.egorov.parser.CliParserTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

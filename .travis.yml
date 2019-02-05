@@ -1,0 +1,8 @@
+language: java
+jdk:
+  - oraclejdk8
+before_install:
+  - chmod +x /CLI/gradlew
+  - chmod +x /CLI/gradle/wrapper/gradle-wrapper.jar
+script:
+  - ./CLI/gradlew test build
