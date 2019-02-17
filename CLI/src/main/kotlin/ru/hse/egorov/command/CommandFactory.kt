@@ -12,14 +12,16 @@ class CommandFactory {
     companion object {
         fun getCommandByType(type: CommandToken.Companion.CommandType, env: Environment): Command {
             return when (type) {
-                GREP -> GrepCommand()
+                GREP -> GrepCommand(env)
                 WC -> WcCommand()
-                CAT -> CatCommand()
+                CAT -> CatCommand(env)
                 ECHO -> EchoCommand()
-                PWD -> PwdCommand()
+                PWD -> PwdCommand(env)
                 EXIT -> ExitCommand()
                 ASSIGN_COMMAND -> AssignCommand(env)
-                else -> UnknownCommand()
+                CD -> CdCommand(env)
+                LS -> LsCommand(env)
+                else -> UnknownCommand(env)
             }
         }
     }
