@@ -1,6 +1,6 @@
 package ru.hse.egorov.command
 
-import java.io.File
+import ru.hse.egorov.environment.Environment
 import java.io.IOException
 import java.nio.charset.Charset
 
@@ -8,7 +8,8 @@ import java.nio.charset.Charset
 /**
  * This class prints number of lines, words and bytes in given files or previous command result.
  */
-class WcCommand : Command {
+class WcCommand(env: Environment) : Command {
+    private val environment = env
 
     override fun execute(args: List<String>, input: String): String {
         return if (args.isEmpty()) {
@@ -20,7 +21,7 @@ class WcCommand : Command {
 
     private fun calcFileStatistics(filename: String): String {
         return try {
-            calcStatistics(File(filename).readBytes())
+            calcStatistics(environment.pathToFile(filename).readBytes())
         } catch (_: IOException) {
             FILE_READ_FAIL_MESSAGE_PREFIX + filename
         }
