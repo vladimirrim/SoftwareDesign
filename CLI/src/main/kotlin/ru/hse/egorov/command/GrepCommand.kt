@@ -2,14 +2,16 @@ package ru.hse.egorov.command
 
 import com.xenomachina.argparser.ArgParser
 import com.xenomachina.argparser.default
-import java.io.File
+import ru.hse.egorov.environment.Environment
 import java.io.IOException
+import java.nio.file.Paths
 
 /**
  * This class implements grep commands with following keys -- -i for case ignoring, -A n for showing n string after matching string,
  * -w for word matching.
  */
-class GrepCommand : Command {
+class GrepCommand(env: Environment) : Command {
+    private val environment = env
 
     override fun execute(args: List<String>, input: String): String {
         return ArgParser(args.toTypedArray()).parseInto(::GrepArgs).run {
@@ -56,7 +58,7 @@ class GrepCommand : Command {
 
     private fun processFile(filename: String, regex: Regex, isWordMatching: Boolean, afterContext: Int): String {
         return try {
-            processString(File(filename).readText(), regex, isWordMatching, afterContext)
+            processString(environment.pathToFile(filename).readText(), regex, isWordMatching, afterContext)
         } catch (_: IOException) {
             FILE_READ_FAIL_MESSAGE_PREFIX + "$filename\n"
         }

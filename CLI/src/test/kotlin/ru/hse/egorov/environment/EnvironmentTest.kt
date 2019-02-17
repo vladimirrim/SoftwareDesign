@@ -25,4 +25,11 @@ internal class EnvironmentTest {
         env.setVariable("a", "c")
         assertEquals("c", env.getVariable("a"))
     }
+
+    @Test
+    fun testAssignWorkDir() {
+        val env = Environment()
+        env.setWorkDir("some/path")
+        assertEquals("some/path", env.getWorkDir())
+    }
 }
