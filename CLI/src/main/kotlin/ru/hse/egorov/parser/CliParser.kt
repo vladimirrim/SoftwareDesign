@@ -14,7 +14,6 @@ class CliParser(private val env: Environment) : Parser {
             ParserFactory.getCommandParser().parse(unquotedString.joinToString("") { token ->
                 when (token.type) {
                     STRONG_QUOTE -> token.args
-                    PARSE_COMMAND -> parseEnvironmentVariables(token.args).args
                     else -> {
                         parseEnvironmentVariables(token.args).args
                     }
