@@ -11,8 +11,6 @@ internal class PwdCommandTest {
     @Test
     fun testPwd() {
         val pwdCommand = CommandFactory.getCommandByType(CommandToken.Companion.CommandType.PWD, env)
-        assertTrue(pwdCommand.execute(listOf(), "").contains("src"))
-        assertTrue(pwdCommand.execute(listOf(), "").contains("build.gradle"))
-        assertTrue(pwdCommand.execute(listOf(), "").contains("gradlew"))
+        assertTrue(pwdCommand.execute(listOf(), "").contains("CLI"))
     }
 }

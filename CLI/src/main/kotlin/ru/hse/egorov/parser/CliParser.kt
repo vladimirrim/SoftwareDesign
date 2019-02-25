@@ -11,13 +11,15 @@ class CliParser(private val env: Environment) : Parser {
     override fun parse(input: String): List<CommandToken> {
         return try {
             val unquotedString = ParserFactory.getQuoteParser().parse(input)
-            unquotedString.flatMap { token ->
+            ParserFactory.getCommandParser().parse(unquotedString.joinToString("") { token ->
                 when (token.type) {
-                    STRONG_QUOTE -> listOf(CommandToken(STRING, token.args))
-                    WEAK_QUOTE -> listOf(parseEnvironmentVariables(token.args))
-                    else -> ParserFactory.getCommandParser().parse(parseEnvironmentVariables(token.args).args)
+                    STRONG_QUOTE -> token.args
+                    PARSE_COMMAND -> parseEnvironmentVariables(token.args).args
+                    else -> {
+                        parseEnvironmentVariables(token.args).args
+                    }
                 }
-            }
+            })
         } catch (e: QuoteParsingException) {
             listOf(CommandToken(ECHO, e.localizedMessage))
         }
@@ -36,7 +38,7 @@ class CliParser(private val env: Environment) : Parser {
             }
         }
 
-        return CommandToken(STRING, commandString)
+        return CommandToken(STRING, commandString + if (input.last().isWhitespace()) " " else "")
     }
 
     companion object {

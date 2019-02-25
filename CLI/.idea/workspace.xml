@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="585a7bb6-d696-4d6e-89e2-e0192276ce6d" name="Default Changelist" comment="" />
+    <list default="true" id="585a7bb6-d696-4d6e-89e2-e0192276ce6d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/AssignCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/AssignCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/PwdCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/PwdCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/WcCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/WcCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/interpreter/CommandInterpreter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/interpreter/CommandInterpreter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CliParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CliParser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CommandParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CommandParser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/QuoteParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/QuoteParser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/MainTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/MainTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/PwdCommandTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/PwdCommandTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/interpreter/CommandInterpreterTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/interpreter/CommandInterpreterTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/CliParserTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/CliParserTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/QuoteParserTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/QuoteParserTest.kt" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -56,42 +71,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/ParserFactory.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/QuoteParser.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/QuoteParserTest.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+            <state relative-caret-position="-516">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
-                <element signature="e#30#169#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/Main.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="48" />
-              <folding>
-                <element signature="e#23#161#0" expanded="true" />
+                <element signature="e#30#157#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,55 +85,95 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/MainTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            <state relative-caret-position="539">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
-                <element signature="e#23#237#0" expanded="true" />
+                <element signature="e#23#248#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/CliParserTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="e#30#278#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/CatCommandTest.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-              <folding>
-                <element signature="e#31#223#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/test.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/WcCommand.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            <state relative-caret-position="476">
+              <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/QuoteParsingException.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/PwdCommand.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+            <state relative-caret-position="187">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/PwdCommandTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <folding>
+                <element signature="e#31#201#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CommandParser.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+              <folding>
+                <element signature="e#30#184#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CliParser.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+              <folding>
+                <element signature="e#30#139#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/interpreter/CommandInterpreter.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -166,6 +191,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="hw_2" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -179,45 +209,46 @@
         <option value="$PROJECT_DIR$/src/main/resources/example.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/script.sh" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/interpreter/Interpreter.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/interpreter/CommandInterpreter.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CommandToken.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CommandParser.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/Parser.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/QuoteParser.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/Main.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/environment/Environment.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/Command.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/AssignCommand.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/CommandFactory.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/ExitCommand.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/EchoCommand.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/UnknownCommand.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/PwdCommand.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/CatCommand.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/interpreter/InterpreterFactory.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/ParserFactory.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/QuoteParsingException.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CliParser.kt" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/AssignCommandTest.kt" />
         <option value="$PROJECT_DIR$/src/test/resources/test.txt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/CatCommandTest.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/EchoCommandTest.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/PwdCommandTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/WcCommand.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/WcCommandTest.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/environment/EnvironmentTest.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/CommandParserTest.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/MainKtTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/QuoteParser.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/AssignCommand.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/QuoteParserTest.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/interpreter/CommandInterpreterTest.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/CliParserTest.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/CommandParserTest.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/QuoteParserTest.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/MainKtTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/interpreter/CommandInterpreter.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/MainTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CommandParser.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CliParser.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/PwdCommand.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/PwdCommandTest.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/WcCommand.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
@@ -229,6 +260,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,6 +310,42 @@
               <item name="CLI" type="b2602c69:ProjectViewProjectNode" />
               <item name="CLI" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="egorov" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CLI" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="egorov" type="462c0819:PsiDirectoryNode" />
+              <item name="environment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CLI" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="egorov" type="462c0819:PsiDirectoryNode" />
+              <item name="interpreter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CLI" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="egorov" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CLI" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -307,14 +376,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549400261427" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551120402692" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/kotlin" />
@@ -364,63 +431,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CLI [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CLI [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CLI [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="CLI [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -440,17 +450,51 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PwdCommandTest.testPwd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.testArgsWithQuotes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw_1.CLI.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.hse.egorov.command.*" />
+          <option name="PATTERN" value="ru.hse.egorov.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.hse.egorov.command" />
-      <option name="MAIN_CLASS_NAME" value="ru.hse.egorov.command.PwdCommandTest" />
-      <option name="METHOD_NAME" value="testPwd" />
+      <option name="PACKAGE_NAME" value="ru.hse.egorov" />
+      <option name="MAIN_CLASS_NAME" value="ru.hse.egorov.MainTest" />
+      <option name="METHOD_NAME" value="testArgsWithQuotes" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testAssignWithSpaces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw_1.CLI.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.hse.egorov.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.hse.egorov" />
+      <option name="MAIN_CLASS_NAME" value="ru.hse.egorov.MainTest" />
+      <option name="METHOD_NAME" value="testAssignWithSpaces" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testInvalidQuoteCommands" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw_1.CLI.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.hse.egorov.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.hse.egorov" />
+      <option name="MAIN_CLASS_NAME" value="ru.hse.egorov.MainTest" />
+      <option name="METHOD_NAME" value="testInvalidQuoteCommands" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -460,6 +504,19 @@
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ru.hse.egorov.MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="hw_1.CLI.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ru.hse.egorov.MainKt" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -474,11 +531,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CLI [jar]" />
-        <item itemvalue="Gradle.CLI [build]" />
-        <item itemvalue="Gradle.CLI [clean]" />
         <item itemvalue="Gradle.CLI [test]" />
-        <item itemvalue="JUnit.PwdCommandTest.testPwd" />
+        <item itemvalue="JUnit.MainTest.testArgsWithQuotes" />
+        <item itemvalue="JUnit.MainTest.testAssignWithSpaces" />
+        <item itemvalue="JUnit.MainTest.testInvalidQuoteCommands" />
+        <item itemvalue="Kotlin.ru.hse.egorov.MainKt" />
       </list>
     </recent_temporary>
   </component>
@@ -497,43 +554,44 @@
       <workItem from="1549118469967" duration="4684000" />
       <workItem from="1549300325517" duration="671000" />
       <workItem from="1549373483892" duration="18911000" />
+      <workItem from="1551111610118" duration="8589000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CLI_[test] - 2019.02.05 at 22h 20m 37s.xml">
+    <history-entry file="MainTest_testArgsWithQuotes - 2019.02.25 at 21h 22m 15s.xml">
+      <configuration name="MainTest.testArgsWithQuotes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_testArgsWithQuotes - 2019.02.25 at 21h 23m 28s.xml">
+      <configuration name="MainTest.testArgsWithQuotes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_testArgsWithQuotes - 2019.02.25 at 21h 23m 37s.xml">
+      <configuration name="MainTest.testArgsWithQuotes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_testArgsWithQuotes - 2019.02.25 at 21h 25m 16s.xml">
+      <configuration name="MainTest.testArgsWithQuotes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_testArgsWithQuotes - 2019.02.25 at 21h 26m 50s.xml">
+      <configuration name="MainTest.testArgsWithQuotes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_testArgsWithQuotes - 2019.02.25 at 21h 27m 09s.xml">
+      <configuration name="MainTest.testArgsWithQuotes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CLI_[test] - 2019.02.25 at 21h 27m 15s.xml">
       <configuration name="CLI [test]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CLI_[test] - 2019.02.05 at 22h 22m 51s.xml">
+    <history-entry file="CLI_[test] - 2019.02.25 at 21h 34m 58s.xml">
       <configuration name="CLI [test]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CLI_[test] - 2019.02.05 at 22h 28m 47s.xml">
+    <history-entry file="CLI_[test] - 2019.02.25 at 21h 37m 04s.xml">
       <configuration name="CLI [test]" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CLI_[test] - 2019.02.05 at 22h 29m 07s.xml">
-      <configuration name="CLI [test]" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CLI_[test] - 2019.02.05 at 22h 34m 19s.xml">
-      <configuration name="CLI [test]" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CLI_[test] - 2019.02.05 at 22h 37m 11s.xml">
-      <configuration name="CLI [test]" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CLI_[test] - 2019.02.05 at 22h 37m 45s.xml">
-      <configuration name="CLI [test]" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CLI_[test] - 2019.02.05 at 22h 42m 39s.xml">
-      <configuration name="CLI [test]" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CLI_[test] - 2019.02.05 at 22h 51m 41s.xml">
-      <configuration name="CLI [test]" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CLI_[test] - 2019.02.05 at 22h 57m 21s.xml">
+    <history-entry file="CLI_[test] - 2019.02.25 at 21h 37m 03s.xml">
       <configuration name="CLI [test]" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35674000" />
+    <option name="totallyTimeSpent" value="44392000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -546,8 +604,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2624161" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24228188" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -556,8 +615,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32719547" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.2917847" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3385269" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -585,35 +644,49 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/AssignCommand.kt</url>
+          <line>13</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/AssignCommand.kt</url>
+          <line>10</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CliParser.kt</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="input" language="kotlin" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>input</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/StringCommand.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/InvalidCommandException.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/script.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/UndefinedVariableException.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/StringCommand.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/InvalidCommandException.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/script.sh" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/UndefinedVariableException.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/Command.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -655,21 +728,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/resources/example.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/CatCommand.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/AssignCommand.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -680,13 +739,6 @@
           <folding>
             <element signature="e#31#181#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/EchoCommand.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -704,30 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/PwdCommand.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/PwdCommandTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="e#31#201#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/WcCommand.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -758,53 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/interpreter/CommandInterpreter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/interpreter/CommandInterpreterTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="51" column="15" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="15" />
-          <folding>
-            <element signature="e#35#207#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CliParser.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding>
-            <element signature="e#30#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/CliParserTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-          <folding>
-            <element signature="e#30#213#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CommandParser.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="e#30#276#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/CommandParserTest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -815,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CommandToken.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/Parser.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -829,10 +803,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/ParserFactory.kt">
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/test.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="34">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -843,67 +820,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/QuoteParser.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/QuoteParserTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
-          <folding>
-            <element signature="e#30#169#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="48" />
-          <folding>
-            <element signature="e#23#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/MainTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="e#23#237#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/CatCommandTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        <state relative-caret-position="306">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="e#31#223#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/test.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/ParserFactory.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        <state relative-caret-position="289">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/CatCommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CommandToken.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/QuoteParserTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+          <folding>
+            <element signature="e#30#234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/interpreter/CommandInterpreterTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="e#35#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/EchoCommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#23#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/AssignCommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CommandParser.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+          <folding>
+            <element signature="e#30#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/parser/CliParserTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#30#278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/interpreter/CommandInterpreter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/QuoteParser.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-516">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#30#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/parser/CliParser.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+          <folding>
+            <element signature="e#30#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/PwdCommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/MainTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#23#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/ru/hse/egorov/command/PwdCommandTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#31#201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ru/hse/egorov/command/WcCommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
         </state>
       </provider>
     </entry>

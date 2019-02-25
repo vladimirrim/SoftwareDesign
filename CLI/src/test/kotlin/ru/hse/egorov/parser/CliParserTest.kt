@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import ru.hse.egorov.environment.Environment
 import ru.hse.egorov.interpreter.InterpreterFactory
+import ru.hse.egorov.parser.CommandToken.Companion.CommandType.*
 
 internal class CliParserTest {
     private var env = Environment()
@@ -11,7 +12,7 @@ internal class CliParserTest {
     @Test
     fun testOneCommand() {
         val parser = ParserFactory.getCliParser(env)
-        val answer = listOf(CommandToken(CommandToken.Companion.CommandType.ECHO, "123"))
+        val answer = listOf(CommandToken(ECHO, "123"))
         assertEquals(answer, parser.parse("echo 123"))
     }
 
@@ -29,9 +30,8 @@ internal class CliParserTest {
     fun testThreeCommands() {
         val parser = ParserFactory.getCliParser(env)
         val answer = listOf(
-            CommandToken(CommandToken.Companion.CommandType.ECHO, "123"),
-            CommandToken(CommandToken.Companion.CommandType.STRING, "123"),
-            CommandToken((CommandToken.Companion.CommandType.CAT), "")
+            CommandToken(ECHO, "123123"),
+            CommandToken(CAT, "")
         )
         assertEquals(answer, parser.parse("echo 123\"123\" | cat"))
     }
@@ -42,7 +42,7 @@ internal class CliParserTest {
         val parser = ParserFactory.getCliParser(env)
         val interpreter = InterpreterFactory.getCliInterpreter(env)
         interpreter.interpret(parser.parse("a=echo"))
-        val answer = listOf(CommandToken(CommandToken.Companion.CommandType.ECHO, "123"))
+        val answer = listOf(CommandToken(ECHO, "123"))
 
         assertEquals(answer, parser.parse("\$a 123"))
     }

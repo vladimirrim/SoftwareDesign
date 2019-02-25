@@ -11,7 +11,7 @@ class UnknownCommand : Command {
             val process = Runtime.getRuntime().exec(args.toTypedArray())
             process.outputStream.write(input.toByteArray())
             process.waitFor()
-            process.inputStream.readBytes().toString()
+            String(process.inputStream.readBytes())
         } catch (_: Exception) {
             "$EXCEPTION_MESSAGE${args[0]}"
         }

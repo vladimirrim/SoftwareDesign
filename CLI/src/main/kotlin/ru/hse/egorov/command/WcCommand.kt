@@ -28,7 +28,7 @@ class WcCommand : Command {
 
     private fun calcStatistics(bytes: ByteArray): String {
         val string = bytes.toString(Charset.defaultCharset())
-        return "${string.count { it == '\n' } + 1} ${string.split("\\s+".toRegex()).filter { it.isNotEmpty() }.size} ${bytes.size}"
+        return "${string.lines().size} ${string.split("\\s+".toRegex()).filter { it.isNotEmpty() }.size} ${bytes.size}"
     }
 
     companion object {
