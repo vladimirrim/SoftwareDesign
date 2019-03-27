@@ -24,6 +24,7 @@ hs_err_pid*
 #Gradle
 .gradletasknamecache
 .gradle/
+.idea/
 build/
 bin/
 out/

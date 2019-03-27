@@ -28,8 +28,30 @@ internal class MainTest {
     }
 
     @Test
+    fun testPipelineWithoutSpaces() {
+        assertEquals("1", executeLine("echo 1|cat|cat|cat"))
+    }
+
+    @Test
+    fun testInvalidPipeLast() {
+        assertEquals("Invalid pipe command.", executeLine("echo 123 |"))
+    }
+
+    @Test
+    fun testInvalidPipeFirst() {
+        assertEquals("Invalid pipe command.", executeLine("| wc"))
+    }
+
+    @Test
     fun testInvalidQuoteCommands() {
         assertEquals("Invalid quoting.", executeLine("echo \"text"))
+    }
+
+    @Test
+    fun testEchoWeakQuotesStringQuotesAssign() {
+        executeLine("x=1")
+
+        assertEquals("'1231'", executeLine("echo \"'123\$x'\""))
     }
 
     @Test
