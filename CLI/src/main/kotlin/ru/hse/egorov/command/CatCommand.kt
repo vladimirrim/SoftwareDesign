@@ -1,5 +1,6 @@
 package ru.hse.egorov.command
 
+import ru.hse.egorov.interpreter.CommandInterpretingException
 import java.io.File
 import java.io.IOException
 
@@ -12,7 +13,7 @@ class CatCommand : Command {
         return if (args.isEmpty()) {
             input
         } else {
-            args.joinToString("", "", "\n") { readFile(it) }
+            args.joinToString("", "", System.lineSeparator()) { readFile(it) }
         }
     }
 
@@ -20,7 +21,7 @@ class CatCommand : Command {
         return try {
             File(filename).readText()
         } catch (_: IOException) {
-            FILE_READ_FAIL_MESSAGE_PREFIX + filename
+            throw CommandInterpretingException(FILE_READ_FAIL_MESSAGE_PREFIX + filename)
         }
     }
 

@@ -1,6 +1,6 @@
 package ru.hse.egorov.interpreter
 
-import ru.hse.egorov.parser.CommandToken
+import ru.hse.egorov.parser.ParsedToken
 
 /**
  * This interface represents commands executor.
@@ -12,5 +12,5 @@ interface Interpreter {
      * @param commands are given commands
      * @return interpreted result
      */
-    fun interpret(commands: List<CommandToken>): String
+    fun interpret(commands: List<ParsedToken>): String
 }

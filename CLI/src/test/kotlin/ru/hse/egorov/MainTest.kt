@@ -8,6 +8,7 @@ import ru.hse.egorov.parser.ParserFactory
 
 internal class MainTest {
     private val env = Environment()
+    private val sep = System.lineSeparator()
     private val interpreter = InterpreterFactory.getCliInterpreter(env)
     private val parser = ParserFactory.getCliParser(env)
 
@@ -18,7 +19,7 @@ internal class MainTest {
         executeLine("c=wc")
         executeLine("kek=jojo")
 
-        assertEquals("1 1 4\n", executeLine("\$a \$kek | \$b|\$c"))
+        assertEquals("1 1 4$sep", executeLine("\$a \$kek | \$b|\$c"))
     }
 
     @Test
@@ -39,8 +40,24 @@ internal class MainTest {
     }
 
     @Test
+    fun testEchoWithSpaces() {
+        assertEquals("    text    f", executeLine("echo \"    text    f\""))
+    }
+
+    @Test
     fun testArgsWithQuotes() {
         assertEquals("privet", executeLine("echo 'pri'vet"))
+    }
+
+    @Test
+    fun testCommandWithQuotes() {
+        assertEquals("text", executeLine("\"ec\"ho text"))
+    }
+
+    @Test
+    fun testAssignWithQuote() {
+        executeLine("x=text")
+        assertEquals("'text", executeLine("echo \"'\$x\""))
     }
 
     private fun executeLine(input: String) = interpreter.interpret(parser.parse(input))

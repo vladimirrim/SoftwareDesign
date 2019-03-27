@@ -9,10 +9,10 @@ class ParserFactory {
 
     companion object {
 
-        fun getCliParser(env: Environment): Parser = CliParser(env)
+        fun getCliParser(env: Environment) = CliParser(env)
 
-        fun getQuoteParser(): Parser = QuoteParser()
+        fun getQuoteParser() = QuoteParser()
 
-        fun getCommandParser(): Parser = CommandParser()
+        fun getCommandParser() = CommandParser()
     }
 }

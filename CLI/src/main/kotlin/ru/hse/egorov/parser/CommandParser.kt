@@ -5,29 +5,79 @@ import ru.hse.egorov.parser.CommandToken.Companion.CommandType.Companion.getComm
 
 
 /**
- * This class implements command input parser.
+ * This class implements command tokens parser.
  */
-class CommandParser : Parser {
+class CommandParser {
 
-    override fun parse(input: String): List<CommandToken> {
-        val commands = input.split("$PIPE_OPERATOR")
-        return if (commands.all { command -> command.split("\\s+".toRegex()).any { it.isNotEmpty() } }) {
-            input.split("$PIPE_OPERATOR").map { command ->
-                val tokens = command.split("\\s+".toRegex()).filter { it.isNotEmpty() }
-                if (commands.size == 1 && tokens[0].split("=").size > 1) {
-                    CommandToken(ASSIGN_COMMAND, command)
+    fun parse(input: List<CommandToken>): List<ParsedToken> {
+        val commands = splitCommands(input)
+
+        return if (commands.all { it.isNotEmpty() }) {
+            commands.map { command ->
+                if (commands.size == 1 && command[0].split("=").size > 1) {
+                    ParsedToken(ASSIGN_COMMAND, listOf(command[0]))
                 } else {
-                    val commandType = getCommandByName(tokens[0])
+                    val commandType = getCommandByName(command[0])
                     if (commandType == UNKNOWN_COMMAND) {
-                        CommandToken(commandType, tokens.subList(0, tokens.size).joinToString(" "))
+                        ParsedToken(commandType, command.subList(0, command.size))
                     } else {
-                        CommandToken(commandType, tokens.subList(1, tokens.size).joinToString(" "))
+                        ParsedToken(commandType, command.subList(1, command.size))
                     }
                 }
             }
         } else {
-            listOf(CommandToken(ECHO, PIPE_ERROR_MESSAGE))
+            listOf(ParsedToken(ECHO, listOf(PIPE_ERROR_MESSAGE)))
         }
+    }
+
+    private fun splitCommands(input: List<CommandToken>): MutableList<MutableList<String>> {
+        var quote = ""
+        val commands = mutableListOf<MutableList<String>>()
+        var isSeparateLast = true
+
+        input.forEach { token ->
+            if (token.type == PARSE_COMMAND) {
+                val tokens = token.args.split(PIPE_OPERATOR).toMutableList()
+                val isSeparateFirst = tokens[0].first().isWhitespace()
+
+                if (isSeparateLast) {
+                    if (commands.isEmpty())
+                        commands.add(mutableListOf())
+                    commands.last().add(quote)
+                } else
+                    commands.last()[commands.last().size - 1] += quote
+                quote = ""
+
+                val firstCommandParts = tokens[0].split("\\s+".toRegex())
+                if (firstCommandParts.any { it.isNotEmpty() }) {
+                    if (isSeparateFirst || commands.isEmpty()) {
+                        if (commands.isEmpty())
+                            commands.add(mutableListOf())
+                        commands.last().addAll(firstCommandParts)
+                    } else {
+                        commands.last()[commands.last().size - 1] += firstCommandParts.first()
+                        if (firstCommandParts.size > 1)
+                            commands.last().addAll(firstCommandParts.subList(1, firstCommandParts.size))
+                    }
+                }
+
+                isSeparateLast = tokens.last().first().isWhitespace()
+                tokens.removeAt(0)
+                tokens.forEach { command ->
+                    commands.add(command.split("\\s+".toRegex()).filter { it.isNotEmpty() }.toMutableList())
+                }
+            } else {
+                quote += token.args
+            }
+        }
+
+        if (quote.isNotEmpty()) {
+            if (isSeparateLast)
+                commands.last().add(quote)
+            else
+                commands.last()[commands.last().size - 1] += quote
+        }
+        return commands
     }
 
     companion object {

@@ -6,9 +6,9 @@ import ru.hse.egorov.parser.CommandToken.Companion.CommandType.*
 /**
  * This class parses string with quotes to CLI commands.
  */
-class QuoteParser : Parser {
+class QuoteParser {
 
-    override fun parse(input: String): List<CommandToken> {
+    fun parse(input: String): List<CommandToken> {
         val result = ArrayList<CommandToken>()
         var i = 0
         while (i < input.length) {

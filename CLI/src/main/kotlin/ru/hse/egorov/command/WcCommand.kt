@@ -1,5 +1,6 @@
 package ru.hse.egorov.command
 
+import ru.hse.egorov.interpreter.CommandInterpretingException
 import java.io.File
 import java.io.IOException
 import java.nio.charset.Charset
@@ -14,15 +15,15 @@ class WcCommand : Command {
         return if (args.isEmpty()) {
             calcStatistics(input.toByteArray(Charset.defaultCharset()))
         } else {
-            args.joinToString("\n") { calcFileStatistics(it) }
-        } + "\n"
+            args.joinToString(System.lineSeparator()) { calcFileStatistics(it) }
+        } + System.lineSeparator()
     }
 
     private fun calcFileStatistics(filename: String): String {
         return try {
             calcStatistics(File(filename).readBytes())
         } catch (_: IOException) {
-            FILE_READ_FAIL_MESSAGE_PREFIX + filename
+            throw CommandInterpretingException(FILE_READ_FAIL_MESSAGE_PREFIX + filename)
         }
     }
 
