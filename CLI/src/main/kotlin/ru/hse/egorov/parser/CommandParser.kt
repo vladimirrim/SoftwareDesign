@@ -12,7 +12,7 @@ class CommandParser {
     fun parse(input: List<CommandToken>): List<ParsedToken> {
         val commands = splitCommands(input)
 
-        return if (commands.all { it.isNotEmpty() }) {
+        return if (commands.all { it.isNotEmpty() } && commands.all { command -> command.any { it.isNotEmpty() } }) {
             commands.map { command ->
                 if (commands.size == 1 && command[0].split("=").size > 1) {
                     ParsedToken(ASSIGN_COMMAND, listOf(command[0]))
@@ -38,6 +38,9 @@ class CommandParser {
         input.forEach { token ->
             if (token.type == PARSE_COMMAND) {
                 val tokens = token.args.split(PIPE_OPERATOR).toMutableList()
+
+                if (tokens.first().isEmpty())
+                    tokens[0] += " "
                 val isSeparateFirst = tokens[0].first().isWhitespace()
 
                 if (isSeparateLast) {
@@ -61,6 +64,9 @@ class CommandParser {
                     }
                 }
 
+                if (tokens.last().isEmpty()) {
+                    tokens[tokens.size - 1] += " "
+                }
                 isSeparateLast = tokens.last().first().isWhitespace()
                 tokens.removeAt(0)
                 tokens.forEach { command ->

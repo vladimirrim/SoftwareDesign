@@ -34,7 +34,7 @@ class CliParser(private val env: Environment) {
                 it
             } else {
                 val key = it.takeWhile { char ->
-                    !char.isWhitespace()
+                    !char.isWhitespace() && char != '\'' && char != '"'
                 }
                 it.replaceFirst(key, env.getVariable(key))
             }
