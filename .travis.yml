@@ -1,0 +1,6 @@
+sudo: false
+language: java
+before_install:
+    - chmod +x CLI/gradlew
+    - cd CLI
+    - ./gradlew build
