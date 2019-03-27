@@ -1,42 +1,46 @@
 package ru.hse.egorov.parser
 
 import ru.hse.egorov.environment.Environment
-import ru.hse.egorov.parser.CommandToken.Companion.CommandType.*
+import ru.hse.egorov.parser.CommandToken.Companion.CommandType.ECHO
+import ru.hse.egorov.parser.CommandToken.Companion.CommandType.STRONG_QUOTE
 
 /**
  * This class implements command line input parser.
  */
-class CliParser(private val env: Environment) : Parser {
+class CliParser(private val env: Environment) {
 
-    override fun parse(input: String): List<CommandToken> {
+    fun parse(input: String): List<ParsedToken> {
         return try {
             val unquotedString = ParserFactory.getQuoteParser().parse(input)
-            unquotedString.flatMap { token ->
+            ParserFactory.getCommandParser().parse(unquotedString.map { token ->
                 when (token.type) {
-                    STRONG_QUOTE -> listOf(CommandToken(STRING, token.args))
-                    WEAK_QUOTE -> listOf(parseEnvironmentVariables(token.args))
-                    else -> ParserFactory.getCommandParser().parse(parseEnvironmentVariables(token.args).args)
+                    STRONG_QUOTE -> token
+                    else -> {
+                        parseEnvironmentVariables(token)
+                    }
                 }
-            }
+            })
         } catch (e: QuoteParsingException) {
-            listOf(CommandToken(ECHO, e.localizedMessage))
+            listOf(ParsedToken(ECHO, listOf(e.localizedMessage)))
         }
     }
 
-    private fun parseEnvironmentVariables(input: String): CommandToken {
-        val commandString = input.split("\\s+".toRegex()).filter { it.isNotEmpty() }.joinToString(" ") { token ->
-            var firstEntry = token[0] != ASSIGN_OPERATOR
-            token.split("$ASSIGN_OPERATOR").joinToString("") {
-                if (firstEntry)
-                    it
-                else {
-                    firstEntry = false
-                    env.getVariable(it)
+    private fun parseEnvironmentVariables(token: CommandToken): CommandToken {
+        val input = token.args
+        var firstEntry = input[0] != ASSIGN_OPERATOR
+        val commandString = input.split("$ASSIGN_OPERATOR").joinToString("") {
+            if (firstEntry) {
+                firstEntry = false
+                it
+            } else {
+                val key = it.takeWhile { char ->
+                    !char.isWhitespace()
                 }
+                it.replaceFirst(key, env.getVariable(key))
             }
         }
 
-        return CommandToken(STRING, commandString)
+        return CommandToken(token.type, commandString)
     }
 
     companion object {

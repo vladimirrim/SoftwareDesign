@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import ru.hse.egorov.environment.Environment
 import ru.hse.egorov.parser.CommandToken
+import ru.hse.egorov.parser.ParsedToken
 
 internal class CommandInterpreterTest {
     private val env = Environment()
@@ -11,23 +12,9 @@ internal class CommandInterpreterTest {
     @Test
     fun testOneCommand() {
         val interpreter = InterpreterFactory.getCliInterpreter(env)
-        assertEquals("123", interpreter.interpret(listOf(CommandToken(CommandToken.Companion.CommandType.ECHO, "123"))))
-    }
-
-    @Test
-    fun testStringCommands() {
-        val interpreter = InterpreterFactory.getCliInterpreter(env)
         assertEquals(
-            "123", interpreter.interpret(
-                listOf(
-                    CommandToken(
-                        CommandToken.Companion.CommandType.ECHO,
-                        ""
-                    ), CommandToken(CommandToken.Companion.CommandType.STRING, "1"),
-                    CommandToken(CommandToken.Companion.CommandType.STRING, "2"),
-                    CommandToken(CommandToken.Companion.CommandType.STRING, "3")
-                )
-            )
+            "123",
+            interpreter.interpret(listOf(ParsedToken(CommandToken.Companion.CommandType.ECHO, listOf("123"))))
         )
     }
 
@@ -37,27 +24,9 @@ internal class CommandInterpreterTest {
         assertEquals(
             "123", interpreter.interpret(
                 listOf(
-                    CommandToken(CommandToken.Companion.CommandType.ECHO, "123"),
-                    CommandToken(CommandToken.Companion.CommandType.CAT, ""),
-                    CommandToken(CommandToken.Companion.CommandType.CAT, "")
-                )
-            )
-        )
-    }
-
-    @Test
-    fun testTwoCommandsWithStringCommands() {
-        val interpreter = InterpreterFactory.getCliInterpreter(env)
-        assertEquals(
-            "123", interpreter.interpret(
-                listOf(
-                    CommandToken(
-                        CommandToken.Companion.CommandType.ECHO,
-                        ""
-                    ), CommandToken(CommandToken.Companion.CommandType.STRING, "1"),
-                    CommandToken(CommandToken.Companion.CommandType.STRING, "2"),
-                    CommandToken(CommandToken.Companion.CommandType.STRING, "3"),
-                    CommandToken(CommandToken.Companion.CommandType.CAT, "")
+                    ParsedToken(CommandToken.Companion.CommandType.ECHO, listOf("123")),
+                    ParsedToken(CommandToken.Companion.CommandType.CAT, listOf("")),
+                    ParsedToken(CommandToken.Companion.CommandType.CAT, listOf(""))
                 )
             )
         )

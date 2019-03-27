@@ -1,12 +1,12 @@
 package ru.hse.egorov.command
 
-import java.io.File
+import java.nio.file.Paths
 
 /**
- * This class prints files and directories in current directory.
+ * This class prints current directory path.
  */
 class PwdCommand : Command {
 
-    override fun execute(args:List<String>, input: String): String =
-        File(".").list().joinToString(" ", "", "\n") { it }
+    override fun execute(args: List<String>, input: String): String =
+        Paths.get("").toAbsolutePath().toString() + "\n"
 }

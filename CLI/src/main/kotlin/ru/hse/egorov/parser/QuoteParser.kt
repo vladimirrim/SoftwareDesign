@@ -1,50 +1,61 @@
 package ru.hse.egorov.parser
 
+import ru.hse.egorov.parser.CommandToken.Companion.CommandType
+import ru.hse.egorov.parser.CommandToken.Companion.CommandType.*
+
 /**
  * This class parses string with quotes to CLI commands.
  */
-class QuoteParser : Parser {
+class QuoteParser {
 
-    override fun parse(input: String): List<CommandToken> {
+    fun parse(input: String): List<CommandToken> {
         val result = ArrayList<CommandToken>()
         var i = 0
         while (i < input.length) {
-            lateinit var parsingResult: ParsingResult
-            lateinit var commandType: CommandToken.Companion.CommandType
-            when (input[i]) {
+            val parsingResult: List<ParsingResult> = when (input[i]) {
                 WEAK_QUOTING -> {
-                    parsingResult = parseWeakQuoting(i, input)
-                    commandType = CommandToken.Companion.CommandType.WEAK_QUOTE
+                    parseWeakQuoting(i, input, WEAK_QUOTE)
                 }
                 STRONG_QUOTING -> {
-                    parsingResult = parseStrongQuoting(i, input)
-                    commandType = CommandToken.Companion.CommandType.STRONG_QUOTE
+                    parseStrongQuoting(i, input, STRONG_QUOTE)
                 }
 
                 else -> {
-                    parsingResult = parseNonQuoting(i, input)
-                    commandType = CommandToken.Companion.CommandType.PARSE_COMMAND
+                    parseNonQuoting(i, input, PARSE_COMMAND)
                 }
             }
-            i = parsingResult.endPosition
-            result.add(CommandToken(commandType, parsingResult.token))
+            i = parsingResult.last().endPosition
+            result.addAll(parsingResult.map { CommandToken(it.commandType, it.token) })
         }
         return result
     }
 
-    private fun parseWeakQuoting(startPosition: Int, input: String) = parseQuoting(startPosition, input) { i ->
-        i < input.length && input[i] != WEAK_QUOTING
-    }
+    private fun parseWeakQuoting(startPosition: Int, input: String, type: CommandType) =
+        parseQuoting(startPosition, input, type) { i ->
+            i < input.length && input[i] != WEAK_QUOTING
+        }
 
-    private fun parseStrongQuoting(startPosition: Int, input: String) = parseQuoting(startPosition, input) { i ->
-        i < input.length && input[i] != STRONG_QUOTING
-    }
+    private fun parseStrongQuoting(startPosition: Int, input: String, type: CommandType) =
+        parseQuoting(startPosition, input, type) { i ->
+            i < input.length && input[i] != STRONG_QUOTING
+        }
 
-    private fun parseNonQuoting(startPosition: Int, input: String) = parseQuoting(startPosition, input) { i ->
-        i < input.length && input[i] != STRONG_QUOTING && input[i] != WEAK_QUOTING
-    }
+    private fun parseNonQuoting(startPosition: Int, input: String, type: CommandType) =
+        parseQuoting(startPosition, input, type) { i ->
+            i < input.length && input[i] != STRONG_QUOTING && input[i] != WEAK_QUOTING
+        }
 
-    private fun parseQuoting(startPosition: Int, input: String, predicate: (Int) -> Boolean): ParsingResult {
+    private fun parseAfterQuoting(startPosition: Int, input: String, type: CommandType) =
+        parseQuoting(startPosition, input, type) { i ->
+            i < input.length && input[i] != STRONG_QUOTING && input[i] != WEAK_QUOTING && !input[i].isWhitespace()
+        }
+
+    private fun parseQuoting(
+        startPosition: Int,
+        input: String,
+        type: CommandType,
+        predicate: (Int) -> Boolean
+    ): List<ParsingResult> {
         var i = startPosition
         var hasQuotes = false
         if (input[i] == STRONG_QUOTING || input[i] == WEAK_QUOTING) {
@@ -59,16 +70,19 @@ class QuoteParser : Parser {
             input.last() != input[startPosition]
         ) throw QuoteParsingException(QUOTE_MESSAGE)
 
-        if (hasQuotes) i++
-
-        return ParsingResult(i, token)
+        if (hasQuotes) {
+            i++
+            if (i < input.length && !input[i].isWhitespace() && input[i] != STRONG_QUOTING && input[i] != WEAK_QUOTING)
+                return mutableListOf(ParsingResult(i, token, type)) + parseAfterQuoting(i, input, STRING)
+        }
+        return listOf(ParsingResult(i, token, type))
     }
 
     companion object {
-        private const val WEAK_QUOTING = '\''
-        private const val STRONG_QUOTING = '"'
+        private const val WEAK_QUOTING = '"'
+        private const val STRONG_QUOTING = '\''
         private const val QUOTE_MESSAGE = "Invalid quoting."
 
-        private data class ParsingResult(val endPosition: Int, val token: String)
+        private data class ParsingResult(val endPosition: Int, val token: String, val commandType: CommandType)
     }
 }
