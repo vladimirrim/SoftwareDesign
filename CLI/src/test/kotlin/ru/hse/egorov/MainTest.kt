@@ -50,6 +50,56 @@ internal class MainTest {
     }
 
     @Test
+    fun testGrepInvalidAArgsNoArgs() {
+        assertEquals("Unable to parse arguments: missing PATTERN operand", executeLine("echo 20 | grep -A 20"))
+    }
+
+    @Test
+    fun testGrepInvalidAArgsNegative() {
+        assertEquals(
+            "Unable to parse arguments: Negative value for after context",
+            executeLine("echo 20 | grep -A -10 20")
+        )
+    }
+
+    @Test
+    fun testGrepCat() {
+        assertEquals(
+            "    compile \"org.jetbrains.kotlin:kotlin-stdlib-jdk8\"$sep" +
+                    "    compile group: 'com.xenomachina', name: 'kotlin-argparser', version: '2.0.7'$sep" +
+                    "    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }$sep" +
+                    "compileKotlin {$sep" +
+                    "compileTestKotlin {$sep",
+            executeLine("cat build.gradle | grep compile")
+        )
+    }
+
+    @Test
+    fun testGrepCatWordMatching() {
+        assertEquals(
+            "    compile \"org.jetbrains.kotlin:kotlin-stdlib-jdk8\"$sep" +
+                    "    compile group: 'com.xenomachina', name: 'kotlin-argparser', version: '2.0.7'$sep" +
+                    "    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }$sep",
+            executeLine("cat build.gradle | grep -w compile")
+        )
+    }
+
+    @Test
+    fun testGrepWordMatching() {
+        assertEquals(
+            "    compile \"org.jetbrains.kotlin:kotlin-stdlib-jdk8\"$sep" +
+                    "    compile group: 'com.xenomachina', name: 'kotlin-argparser', version: '2.0.7'$sep" +
+                    "    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }$sep",
+            executeLine("grep -w compile build.gradle")
+        )
+    }
+
+    @Test
+    fun testGrepInvalidAArgsString() {
+        assertEquals("Unable to parse arguments: For input string: \"kek\"", executeLine("echo 20 | grep -A kek 20"))
+    }
+
+    @Test
     fun testCommandWithQuotes() {
         assertEquals("text", executeLine("\"ec\"ho text"))
     }
