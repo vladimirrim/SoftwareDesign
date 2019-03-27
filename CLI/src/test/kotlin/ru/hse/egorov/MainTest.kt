@@ -100,6 +100,16 @@ internal class MainTest {
     }
 
     @Test
+    fun testGrepEchoWordMatching() {
+        assertEquals("so me text$sep", executeLine("echo so me text | grep -w \"me text\""))
+    }
+
+    @Test
+    fun testGrepEchoNoMatch() {
+        assertEquals("", executeLine("echo some text | grep -w \"me text\""))
+    }
+
+    @Test
     fun testCommandWithQuotes() {
         assertEquals("text", executeLine("\"ec\"ho text"))
     }
